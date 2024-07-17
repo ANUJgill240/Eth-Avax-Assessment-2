@@ -1,9 +1,33 @@
 # Frontend Solodity contract Connection
 ## Description :
-
+This Solidity smart contract implements a simple storage system where a single unsigned integer value can be stored, retrieved, and modified.
 ## Getting Started
+- Run on Remix IDE: Use Remix for online execution.
+- Create a new Solidity file: Click "+" in the left sidebar, save as .sol (e.g., MyToken.sol).
+- Paste the code: Copy and paste your Solidity code into the file.
+---
+    // SPDX-License-Identifier: MIT
+    pragma solidity ^0.8.0;
 
-After cloning the github, you will want to do the following to get the code running on your computer.
+    contract SimpleStorage {
+     uint256 private storedData;
+
+    // Function to set the value
+    function set(uint256 x) public {
+        storedData = x;
+    }
+
+    // Function to get the value
+    function get() public view returns (uint256) {
+        return storedData;
+    }
+
+    // Function to add a value to the stored data
+    function add(uint256 y) public {
+        storedData += y;
+    }
+    }
+
 
 Inside the project directory, in the terminal type: npm i
 Open two additional terminals in your VS code
